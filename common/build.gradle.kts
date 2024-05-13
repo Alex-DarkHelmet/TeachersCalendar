@@ -36,15 +36,19 @@ kotlin {
             implementation(libs.ktor.client.negotiation)
             implementation(libs.ktor.client.json)
 
+            implementation(libs.compose.ui)
+            implementation(libs.compose.ui.tooling)
+            implementation(libs.compose.foundation)
+            implementation(libs.compose.material3)
+
+            implementation(libs.kviewModel.core)
+
             implementation(libs.kodein)
         }
 
         androidMain.dependencies {
             implementation(libs.ktor.client.android)
-            implementation(libs.compose.ui)
-            implementation(libs.compose.ui.tooling)
-            implementation(libs.compose.foundation)
-            implementation(libs.compose.material3)
+
         }
 
         commonTest.dependencies {
@@ -62,5 +66,13 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
+
+    buildFeatures {
+        compose = true
     }
 }

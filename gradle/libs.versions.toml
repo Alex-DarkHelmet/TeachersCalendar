@@ -12,6 +12,7 @@ kodein = "7.21.1"
 
 # Libraries
 coil = "2.5.0"
+kviewModel = "0.14"
 
 #____________________________
 compose-compiler = "1.5.13"
@@ -52,6 +53,10 @@ kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein"}
 # Coil
 coil-core = { module = "io.coil-kt:coil", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+# ViewModel
+kviewModel-core = { module = "com.adeo:kviewmodel" , version.ref = "kviewModel"}
+kviewModel-compose = { module = "com.adeo:kviewmodel-compose" , version.ref = "kviewModel"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
